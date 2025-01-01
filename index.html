@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="assets/img/fav.png"
+      type="image/x-icon"
+    />
+    <!-- REMIX ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css"
+      
+    />
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Hyper Shelf</title>
+  </head>
+  <body>
+
+    <!-- Loader HTML -->
+  <div id="loader" class="loader">
+    <img src="assets/img/load.gif" alt="Loading...">
+  </div>
+
+    <!-- HEADER START -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <i class="ri-book-3-line"></i> HyperShelf
+        </a>
+
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="ri-home-line"></i>
+                <span>Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#about" class="nav__link">
+                <i class="ri-price-tag-3-line"></i>
+                <span>About</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#featured" class="nav__link">
+                <i class="ri-book-3-line"></i>
+                <span>Featured</span>
+              </a>
+            </li>
+
+            
+
+            <li class="nav__item">
+              <a href="#new" class="nav__link">
+                <i class="ri-bookmark-line"></i>
+                <span>New Books</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">
+                <i class="ri-message-3-line"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__actions">
+          
+          <!-- Login button -->
+          <i class="ri-user-line login-button" id="login-button"></i>
+          <!-- Theme button -->
+          <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+          <!-- Search button -->
+          <button class="search-btn" id="search-button" aria-label="Submit search">
+            <i class="ri-search-line"></i><span> Search</span> 
+          </button>
+        </div>
+      </nav>
+    </header>
+    <!--    HEADER END -->
+
+    <!-- SEARCH START -->
+     
+<div class="search" id="search-content">
+  <form action="" class="search__form" onsubmit="searchBooks(event)">
+    <i class="ri-search-line search__icon"></i>
+    <input
+      type="search"
+      id="searchQuery"  
+      placeholder="What are you looking for?"
+      class="search__input"
+    />
+    <button type="submit" class="search__button">Search</button> <!-- Now visible -->
+  </form>
+  <i class="ri-close-line search__close" id="search-close"></i>
+
+  <div id="search-results" class="search-results">
+    <!-- Book results will be displayed here -->
+  </div>
+</div>
+
+
+
+<!-- SEARCH END -->
+
+
+
+    <!-- LOGIN START -->
+    <div class="login grid" id="login-content">
+      <form action="" class="login__form grid">
+        <h3 class="login__title">Log In</h3>
+        <div class="login__group grid">
+          <div>
+            <label for="login-email" class="login__label">Email</label>
+            <input
+              type="email"
+              placeholder="Write your email"
+              id="login-email"
+              class="login__input"
+            />
+          </div>
+
+          <div>
+            <label for="login-pass" class="login__label">Password</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              id="login-pass"
+              class="login__input"
+            />
+          </div>
+        </div>
+        <div>
+          <span class="login__signup">
+            You do not have an account? <a href="#">Sign up</a>
+          </span>
+          <a href="#" class="login__forget">You forget your password</a>
+          <button type="submit" class="login__button button">Log In</button>
+        </div>
+      </form>
+      <i class="ri-close-line login__close" id="login-close"></i>
+    </div>
+    <!-- LOGIN END -->
+
+    <!-- MAIN START -->
+    <main class="main">
+      <!-- HOME START -->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__data">
+            <h1 class="home__title">
+              HyperShelf <br />
+              Discovery
+            </h1>
+            <p class="home__description">
+              Find books from your favorite authors and explore a vast library of genres and categories. Use our powerful search tools to uncover the perfect book for your next read. Start your journey into the world of books.
+            </p>
+            <a href="#featured" class="button">Explore Now</a>
+          </div>
+          <div class="home__images">
+            <div class="home__swiper swiper">
+              <div class="swiper-wrapper">
+                <article class="home__article swiper-slide">
+                  <img
+                    src="assets/img/b1.png"
+                    alt="image"
+                    class="home__img"
+                  />
+                </article>
+                <article class="home__article swiper-slide">
+                  <img
+                    src="assets/img/b2.png"
+                    alt="image"
+                    class="home__img"
+                  />
+                </article>
+                <article class="home__article swiper-slide">
+                  <img
+                    src="assets/img/b3.png"
+                    alt="image"
+                    class="home__img"
+                  />
+                </article>
+                <article class="home__article swiper-slide">
+                  <img
+                    src="assets/img/b4.png"
+                    alt="image"
+                    class="home__img"
+                  />
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- HOME END -->
+      
+      <!-- <div class="search-bar-container">
+        <input type="text" id="searchQuery" class="search-bar" placeholder="Search..." aria-label="Search" />
+        <button class="search-btn">
+          <i class="ri-search-line search-button" id="search-button"></i>
+        </button>
+      </div>
+      <div id="search-results"></div> 
+    -->
+      
+ 
+
+  <!--Seach Section Start-->
+
+    <!-- ABOUT START -->
+<section class="discount section" id="about">
+  <div class="discount__container container grid">
+    <div class="discount__data">
+      <h2 class="discount__title section__title">About HyperShelf</h2>
+      <p class="discount__description">
+        Welcome to HyperReads! Your ultimate destination to search and discover books effortlessly. Explore a vast collection across all genres, from timeless classics to modern bestsellers. Powered by cutting-edge technology, our platform ensures fast and accurate results, helping you find your next favorite read in no time.
+      </p>
+      <!-- Button to scroll to the search section -->
+    </div>
+    <div class="discount__images">
+      <img
+        src="assets/img/a1.png"
+        alt="image"
+        class="discount__img-1"
+      />
+      <img
+        src="assets/img/a2.png"
+        alt="image"
+        class="discount__img-2"
+      />
+    </div>
+
+      
+    </div>
+  </div>
+</section>
+<!-- ABOUT END -->
+
+
+      <!-- SERVICES START -->
+      <section class="services section">
+        <div class="services__container container grid">
+          <article class="services__card">
+            <i class="ri-database-2-fill"></i>
+            <h3 class="services__title">Comprehensive Database</h3>
+            <p class="services__description">Endless Book Collection</p>
+          </article>
+
+          <article class="services__card">
+
+            <i class="ri-file-search-fill"></i>
+            <h3 class="services__title">Fast Search</h3>
+            <p class="services__description">Instant Book Discovery</p>
+          </article>
+
+          <article class="services__card">
+            <i class="ri-24-hours-line"></i>
+            <h3 class="services__title">24/7 Availability</h3>
+            <p class="services__description">Anytime, Anywhere Search</p>
+          </article>
+        </div>
+      </section>
+      <!-- SERVICES END -->
+
+      <!-- FEATURED START -->
+      <section class="featured section" id="featured">
+        <h2 class="section__title">Featured Books</h2>
+
+        <div class="featured__container container">
+          <div class="featured__swiper swiper">
+            <div class="swiper-wrapper">
+             
+
+              <article class="featured__card swiper-slide">
+                <img
+                  src="assets/img/b13.png"
+                  alt="image"
+                  class="featured__img"
+                />
+                <h2 class="featured__title">The Hobbit</h2>
+                <div class="featured__prices">
+                  <span class="featured__discount">Fantasy</span>
+                </div>
+               <a href="https://books.google.lk/books?id=pD6arNyKyi8C&dq=the+hobbit&hl=&source=gbs_api&redir_esc=y" target="_blank"><button class="button">Read More</button></a> 
+                <div class="featured__actions">
+                  <a href="https://books.google.lk/books?id=pD6arNyKyi8C&dq=the+hobbit&hl=&source=gbs_api&redir_esc=y" target="_blank"><button><i class="ri-search-line"></i></button></a>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              
+
+              <article class="featured__card swiper-slide">
+                <img
+                  src="assets/img/b.png"
+                  alt="image"
+                  class="featured__img"
+                />
+                <h2 class="featured__title">The Great Gatsby</h2>
+                <div class="featured__prices">
+                  <span class="featured__discount">Ficton</span>
+                </div>
+               <a href="https://books.google.lk/books?id=iXn5U2IzVH0C&dq=the+great+gatsy&hl=&source=gbs_api&redir_esc=y" target="_blank"><button class="button">Read More</button></a> 
+                <div class="featured__actions">
+                  <a href="https://books.google.lk/books?id=iXn5U2IzVH0C&dq=the+great+gatsy&hl=&source=gbs_api&redir_esc=y" target="_blank"><button><i class="ri-search-line"></i></button></a>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              <article class="featured__card swiper-slide">
+                <img
+                  src="assets/img/b8.png"
+                  alt="image"
+                  class="featured__img"
+                />
+                <h2 class="featured__title">Neuromancer</h2>
+                <div class="featured__prices">
+                  <span class="featured__discount">Science Ficton</span>
+                </div>
+               <a href="https://books.google.lk/books?id=MMXWjgEACAAJ&dq=Neuromancer&hl=&source=gbs_api&redir_esc=y" target="_blank"><button class="button">Read More</button></a> 
+                <div class="featured__actions">
+                  <a href="https://books.google.lk/books?id=MMXWjgEACAAJ&dq=Neuromancer&hl=&source=gbs_api&redir_esc=y" target="_blank"><button><i class="ri-search-line"></i></button></a>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              <article class="featured__card swiper-slide">
+                <img
+                  src="assets/img/b12.png"
+                  alt="image"
+                  class="featured__img"
+                />
+                <h2 class="featured__title">Harry Potter</h2>
+                <div class="featured__prices">
+                  <span class="featured__discount">Fantasy</span>
+                </div>
+               <a href="https://books.google.lk/books?id=3YUrtAEACAAJ&dq=Harry+Potter+and+the+Sorcerer%27s+Stone&hl=&source=gbs_api&redir_esc=y" target="_blank"><button class="button">Read More</button></a> 
+                <div class="featured__actions">
+                  <a href="https://books.google.lk/books?id=3YUrtAEACAAJ&dq=Harry+Potter+and+the+Sorcerer%27s+Stone&hl=&source=gbs_api&redir_esc=y" target="_blank"><button><i class="ri-search-line"></i></button></a>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              <article class="featured__card swiper-slide">
+                <img
+                  src="assets/img/b6.png"
+                  alt="image"
+                  class="featured__img"
+                />
+                <h2 class="featured__title">Dune</h2>
+                <div class="featured__prices">
+                  <span class="featured__discount">Science Ficton</span>
+                </div>
+               <a href="https://books.google.lk/books?id=JhJ7cgAACAAJ&dq=Dune&hl=&source=gbs_api&redir_esc=y" target="_blank"><button class="button">Read More</button></a> 
+                <div class="featured__actions">
+                  <a href="https://books.google.lk/books?id=JhJ7cgAACAAJ&dq=Dune&hl=&source=gbs_api&redir_esc=y" target="_blank"><button><i class="ri-search-line"></i></button></a>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              
+
+              <article class="featured__card swiper-slide">
+                <img
+                  src="assets/img/b11.png"
+                  alt="image"
+                  class="featured__img"
+                />
+                <h2 class="featured__title">Sapiens</h2>
+                <div class="featured__prices">
+                  <span class="featured__discount">Non-Ficton</span>
+                </div>
+               <a href="https://books.google.lk/books?id=FmyBAwAAQBAJ&dq=Sapiens&hl=&source=gbs_api&redir_esc=y" target="_blank"><button class="button">Read More</button></a> 
+                <div class="featured__actions">
+                  <a href="https://books.google.lk/books?id=FmyBAwAAQBAJ&dq=Sapiens&hl=&source=gbs_api&redir_esc=y" target="_blank"><button><i class="ri-search-line"></i></button></a>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              <article class="featured__card swiper-slide">
+                <img
+                  src="assets/img/b10.png"
+                  alt="image"
+                  class="featured__img"
+                />
+                <h2 class="featured__title">Gone Girl</h2>
+                <div class="featured__prices">
+                  <span class="featured__discount">Mystry/Triller</span>
+                </div>
+               <a href="https://books.google.lk/books?id=5cu7sER89nwC&dq=gone+girl&hl=&source=gbs_api&redir_esc=y" target="_blank"><button class="button">Read More</button></a> 
+                <div class="featured__actions">
+                  <a href="https://books.google.lk/books?id=5cu7sER89nwC&dq=gone+girl&hl=&source=gbs_api&redir_esc=y" target="_blank"><button><i class="ri-search-line"></i></button></a>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+
+             
+
+              
+
+            </div>
+
+            <div class="swiper-button-prev">
+              <i class="ri-arrow-left-s-line"></i>
+            </div>
+            <div class="swiper-button-next">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FEATURED END -->
+
+      
+
+      <!-- NEW BOOKS START -->
+      <section class="new section" id="new">
+        <h2 class="section__title">New Books</h2>
+
+        <div class="new__container container">
+          <div class="new__swiper swiper">
+            <div class="swiper-wrapper">
+              <a href="#" class="new__card swiper-slide">
+                <img src="assets/img/n1.png" alt="image" class="new__img" />
+
+                <div>
+                  <h2 class="new__title">Memory Piece</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+                  <div class="new__stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="new__card swiper-slide">
+                <img src="assets/img/n2.png" alt="image" class="new__img" />
+                <div>
+                  <h2 class="new__title">One Way Back</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+                  <div class="new__stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="new__card swiper-slide">
+                <img src="assets/img/n3.png" alt="image" class="new__img" />
+                <div>
+                  <h2 class="new__title">The Burning Earth</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+                  <div class="new__stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+             
+              
+            </div>
+          </div>
+
+          <div class="new__swiper swiper">
+            <div class="swiper-wrapper">
+              <a href="#" class="new__card swiper-slide">
+                <img
+                  src="assets/img/n4.png"
+                  alt="image"
+                  class="new__img"
+                />
+                <div>
+                  <h2 class="new__title">You Shall See The Beautiful Things</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+                  <div class="new__stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="new__card swiper-slide">
+                <img src="assets/img/n5.png" alt="image" class="new__img" />
+                <div>
+                  <h2 class="new__title">The Teacher</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+                  <div class="new__stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="new__card swiper-slide">
+                <img src="assets/img/n6.png" alt="image" class="new__img" />
+                <div>
+                  <h2 class="new__title">The Hunter</h2>
+                  <div class="new__prices">
+                    <span class="new__discount">$7.99</span>
+                    <span class="new__price">$14.99</span>
+                  </div>
+                  <div class="new__stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- NEW BOOKS END -->
+
+      <!-- JOIN START -->
+      <section class="join section">
+        <div class="join__container">
+          <img src="assets/img/ss.png" alt="image" class="join__bg" />
+
+          <div class="join__data container grid">
+            <h2 class="join__title section__title">
+              Subscribe To Receive <br />
+              The Latest Updates
+            </h2>
+
+            <form action="" class="join__form">
+              <input
+                type="email"
+                placeholder="Enter email"
+                class="join__input"
+              />
+              <button type="submit" class="join__button button">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- JOIN END -->
+
+      
+    </main>
+    <!-- MAIN END -->
+
+    <!-- FOOTER START -->
+    <footer class="footer">
+      <div id="contact"></div>
+      <div class="footer__container container grid">
+        <div>
+          <a href="#" class="footer__logo">
+            <i class="ri-book-3-line"></i> HyperShelf
+          </a>
+          <p class="footer__description">
+            Find and explore the best <br />
+            from all your <br />
+            favorite writers
+          </p>
+        </div>
+        <div class="footer__data grid">
+          
+          
+          <div>
+            <h3 class="footer__title">Contact</h3>
+             
+            <a href="mailto:hananhaseem05@gmail.com" target="_blank" class="footer__social-link" ><i class="ri-mail-fill"></i>
+            </a>
+            <a href="mailto:hananhaseem05@gmail.com" target="_blank" class="f">hananhaseem05@gmail.com</a>
+          
+        <br><br>
+                  <a href="https://www.linkedin.com/in/hanan-haseem-20020104hn/" target="_blank" class="footer__social-link" ><i class="ri-linkedin-box-fill"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/hanan-haseem-20020104hn/" target="_blank" class="f">Hanan Haseem</a>
+                
+              <br><br>
+              
+              
+
+          <a href="https://github.com/Hanan-Haseem" target="_blank" class="footer__social-link" ><i class="ri-github-fill"></i>
+          </a>
+          <a href="https://github.com/Hanan-Haseem" target="_blank" class="f">Hanan-Haseem</a>
+        
+ 
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="footer__copy">&#169; All Rights Reserved By Hanan Haseem</span>
+    </footer>
+    <!-- FOOTER END -->
+
+    <!-- SCROLL UP -->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+    
+        // Keep loader visible for 2 seconds to ensure the GIF plays fully
+        setTimeout(() => {
+          loader.classList.add("hidden");
+        }, 1000); // Adjust based on your GIF length
+      });
+    </script>
+
+    
+    
+    <script src="assets/js/script.js"></script>
+    
+    <!-- SCROLLREVEAL -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!-- SWIPER JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- MAIN JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
